@@ -122,6 +122,7 @@ var dg_data = {
                 ['https://giphy.com/','GIPHY'],
                 ['https://svgporn.com/','SVG PORN'],
                 ['https://uihut.com/','UIHUT'],
+                ['https://logolink.com/brand/','Logolink'],
             ],
         },
         {
