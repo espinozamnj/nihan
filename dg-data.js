@@ -276,7 +276,7 @@ var dg_data = {
                 ['https://stocksnap.io/search/','StockSnap'],
                 ['https://www.freepik.com/search?dates=any&format=search&page=1&query=','&selection=1&sort=popular&type=photo','Freepik'],
                 ['https://thenounproject.com/photos/','The Noun Project'],
-                ['https://pixy.org/','Pixy'],
+                ['https://pixy.org/search.php?search=','Pixy'],
             ],
         },
         {
