@@ -19,6 +19,7 @@ var dg_data = {
                 ['https://www.glorify.com/pricing/','Glorify'],
                 ['https://placeit.net/','Place It'],
                 ['https://designer.gravit.io/','Gravit Designer PRO'],
+                ['https://clipdrop.co/','Clipdrop'],
                 ['http://fontastic.me/','Fontastic'],
                 ['https://wordmark.it/','Wordmark'],
                 ['https://studio.polotno.dev/','Polotno Studio'],
