@@ -201,6 +201,7 @@ var dg_data = {
                 ['https://www.freebiesbug.com','Freebiesbug'],
                 ['https://publicdomainvectors.org/es','Publicdomainvectors'],
                 ['https://tabbied.com/select-artwork','Tabbied']
+                ['https://blush.design/collections/open-peeps/open-peeps','Open Peeps']
             ],
         },
         {
@@ -301,10 +302,10 @@ var dg_data = {
             items: [
                 ['https://pixabay.com/vectors/search/','Pixabay'],
                 ['https://iconscout.com/illustrations/','IconScout'],
-                ['https://freewebillustrations.com/','FreeWebIllustrations'],
+                ['https://freewebillustrations.com/search/?q=','FreeWebIllustrations'],
                 ['https://www.123freevectors.com/search/','123freevectors'],
                 ['https://all-free-download.com/free-vector/','.html','All Free Download'],
-                ['https://blush.design/collections/open-peeps/open-peeps','Open Peeps']
+                ['https://blush.design/search/','Blush']
             ],
         },
         {
