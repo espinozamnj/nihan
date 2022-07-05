@@ -200,7 +200,7 @@ var dg_data = {
                 ['https://www.123freevectors.com/','123FreeVectors'],
                 ['https://www.freebiesbug.com','Freebiesbug'],
                 ['https://publicdomainvectors.org/es','Publicdomainvectors'],
-                ['https://tabbied.com/select-artwork','Tabbied']
+                ['https://tabbied.com/select-artwork','Tabbied'],
                 ['https://blush.design/collections/open-peeps/open-peeps','Open Peeps']
             ],
         },
