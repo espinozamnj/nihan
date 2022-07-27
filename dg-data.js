@@ -41,7 +41,7 @@ var dg_data = {
                 ['https://www.remove.bg/','Remove BG'],
                 ['https://retoucher.online/','Retoucher'],
                 ['https://www.watermarkremover.io/','WatermarkRemover'],
-                ['https://magiceraser.io//','Magic Eraser'],
+                ['https://magiceraser.io/','Magic Eraser'],
                 ['https://imgupscaler.com/','AI Upscaler'],
                 ['https://www.upscale.media/','Upscale Media'],
                 ['http://waifu2x.udp.jp/','Waifu2x'],
