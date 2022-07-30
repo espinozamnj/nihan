@@ -194,11 +194,13 @@ var dg_data = {
         {
             title: 'Vectores',
             items: [
+                ['https://openclipart.org/', 'OpenClicpArt'],
                 ['https://www.freepik.com/','Freepik'],
                 ['https://es.vecteezy.com/','Vecteezy'],
                 ['https://www.iconfinder.com/','IconFinder'],
                 ['https://www.123freevectors.com/','123FreeVectors'],
                 ['https://www.freebiesbug.com','Freebiesbug'],
+                ['https://publicdomainvectors.org/es','Publicdomainvectors'],
                 ['https://publicdomainvectors.org/es','Publicdomainvectors'],
                 ['https://tabbied.com/select-artwork','Tabbied'],
                 ['https://blush.design/collections/open-peeps/open-peeps','Open Peeps']
