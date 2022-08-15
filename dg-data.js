@@ -194,6 +194,8 @@ var dg_data = {
         {
             title: 'Vectores',
             items: [
+                ['https://fffuel.co/', 'Fffuel'],
+                ['https://creazilla.com/', 'Creazilla'],
                 ['https://openclipart.org/', 'OpenClicpArt'],
                 ['https://www.freepik.com/','Freepik'],
                 ['https://es.vecteezy.com/','Vecteezy'],
