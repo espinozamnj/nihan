@@ -195,6 +195,8 @@ var dg_data = {
             title: 'Vectores',
             items: [
                 ['https://fffuel.co/', 'Fffuel'],
+                ['https://stonet2000.github.io/Polytomizator/','Polytomizator'],
+                ['https://cojdev.github.io/lowpoly/','LowPoly Generator'],
                 ['https://creazilla.com/', 'Creazilla'],
                 ['https://openclipart.org/', 'OpenClicpArt'],
                 ['https://www.freepik.com/','Freepik'],
@@ -202,7 +204,6 @@ var dg_data = {
                 ['https://www.iconfinder.com/','IconFinder'],
                 ['https://www.123freevectors.com/','123FreeVectors'],
                 ['https://www.freebiesbug.com','Freebiesbug'],
-                ['https://publicdomainvectors.org/es','Publicdomainvectors'],
                 ['https://publicdomainvectors.org/es','Publicdomainvectors'],
                 ['https://tabbied.com/select-artwork','Tabbied'],
                 ['https://blush.design/collections/open-peeps/open-peeps','Open Peeps']
