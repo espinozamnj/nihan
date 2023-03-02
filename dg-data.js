@@ -175,6 +175,7 @@ var dg_data = {
                 ['https://fonts.adobe.com/','Adobe Fonts'],
                 ['https://fontesk.com/','Fontesk'],
                 ['https://befonts.com/','Befonts'],
+                ['https://www.fontbrief.com/fontbrief','FontBrief'],
             ],
         },
         {
