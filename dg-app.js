@@ -128,7 +128,7 @@
             let g_r_a = document.createElement('a')
             g_r_a.setAttribute('target', '_blank')
             g_r_a.innerText = t_rst[0]
-            if (t_b != "") {g_r_a.style.backgroundImage = "url('http://s2.googleusercontent.com/s2/favicons?domain=" + w(t_rst[0]) + "')"}
+            if (t_b != "") {g_r_a.style.backgroundImage = "url('http://s2.googleusercontent.com/s2/favicons?domain=" + w(t_rst[1]) + "')"}
             g_r_a.href = t_rst[1].replace('{Q}',  t_b)
             g_r_c.appendChild(g_r_a)
         }
