@@ -290,13 +290,13 @@ var dg_data = {
     {
       'title': 'Imágenes de pago',
       'items': [
-        ['Alamy', 'https://www.alamy.com/stock-photo/man-drink.html?sortBy=relevant'],
-        ['Shutterstock', 'https://www.shutterstock.com/es/search/man-drink'],
-        ['123RF', 'https://www.123rf.com/stock-photo/man_drink.html'],
-        ['Depositphotos', 'https://sp.depositphotos.com/stock-photos/man-drink.html?filter=all'],
-        ['iStock', 'https://www.istockphoto.com/es/search/2/image?family=creative&phrase=man+drink'],
-        ['Adobe Stock', 'https://stock.adobe.com/pe/search?k=man+drink&search_type=usertyped'],
-        ['Freepik', 'https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query=man%20drink&type=photo']
+        ['Alamy', 'https://www.alamy.com/stock-photo/{Q}.html?sortBy=relevant'],
+        ['Shutterstock', 'https://www.shutterstock.com/es/search/{Q}'],
+        ['123RF', 'https://www.123rf.com/stock-photo/{Q}.html'],
+        ['Depositphotos', 'https://sp.depositphotos.com/stock-photos/{Q}.html?filter=all'],
+        ['iStock', 'https://www.istockphoto.com/es/search/2/image?family=creative&phrase={Q}'],
+        ['Adobe Stock', 'https://stock.adobe.com/pe/search?k={Q}&search_type=usertyped'],
+        ['Freepik', 'https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query={Q}&type=photo']
       ]
     },
     {
