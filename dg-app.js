@@ -5,9 +5,9 @@
     }
 
     let val = $('#val')
-    val.value = unescape(t_b)
+    val.value = decodeURI(t_b)
     let wall = $('#wall')
-    var c_rt = $('#rsts')
+    let c_rt = $('#rsts')
 
     $('#i-apps').addEventListener('click', function() {
         if (db.getAttribute('data-wgd') != 'app-on') {
@@ -54,9 +54,12 @@
             f = u.match(r)[1]
         return f
     }
+    function cssBackDom(src) {
+        return `url('${location.protocol}//s2.googleusercontent.com/s2/favicons?domain=${w(src)}')`
+    }
 
     let was = $('.w-apps')
-    for(const gapp in dg_data['apps']) {
+    for (const gapp in dg_data['apps']) {
         let tg = dg_data['apps'][gapp]
         let w_g_d = document.createElement('div')
         let w_g_p = document.createElement('p')
@@ -74,22 +77,22 @@
         w_g_d.appendChild(w_g_b)
 
         for(const gitems in tg['items']) {
-            ti = tg['items'][gitems], proto = location.protocol + '//'
+            ti = tg['items'][gitems]
             w_g_a = document.createElement('a')
             w_g_b.appendChild(w_g_a)
             w_g_a.href = ti[0]
             w_g_a.innerText = ti[1]
-            w_g_a.style.backgroundImage = "url('" + proto + "//s2.googleusercontent.com/s2/favicons?domain=" + w(ti[0]) + "')"
+            w_g_a.style.backgroundImage = cssBackDom(ti[0])
             // for(const dt in ti) {console.log(ti[dt])}
         }
     }
     function g_result_show(element) {
         let e_t_g = element
-        var i = 0;
+        var i = 0
         while( (element = element.previousSibling)  !=  null )
         i++
         for (var ht = 0; ht < e_t_g.parentElement.childElementCount; ht++) {
-            if (e_t_g.parentElement.children[ht] !== e_t_g.parentElement.children[i]) {
+            if (e_t_g.parentElement.children[ht] != e_t_g.parentElement.children[i]) {
                 e_t_g.parentElement.children[ht].removeAttribute('class')
             }
         }
@@ -112,8 +115,7 @@
         }
     }
 
-    let resultados = $('#resultados')
-    for(const grst in dg_data['searchs']) {
+    for (const grst in dg_data['searchs']) {
         let g_r_g = dg_data['searchs'][grst]
         let g_r_p = document.createElement('p')
         g_r_p.innerText = g_r_g['title']
@@ -123,12 +125,14 @@
         $('#t-groups').appendChild(g_r_p)
         let g_r_c = document.createElement('div')
         c_rt.appendChild(g_r_c)
-        for(const grsts in g_r_g['items']) {
+        for (const grsts in g_r_g['items']) {
             let t_rst = g_r_g['items'][grsts]
             let g_r_a = document.createElement('a')
             g_r_a.setAttribute('target', '_blank')
             g_r_a.innerText = t_rst[0]
-            if (t_b != "") {g_r_a.style.backgroundImage = "url('http://s2.googleusercontent.com/s2/favicons?domain=" + w(t_rst[1]) + "')"}
+            if (t_b != "") {
+                g_r_a.style.backgroundImage = cssBackDom(t_rst[1])
+            }
             g_r_a.href = t_rst[1].replace('{Q}',  t_b)
             g_r_c.appendChild(g_r_a)
         }
@@ -153,7 +157,7 @@
         }
     })
     function i_sch() {
-        open('?s=' + val.value.trim().toLowerCase(),'_top')    
+        open('?s=' + val.value.trim().toLowerCase(), '_parent')    
     }
     $('form').addEventListener('submit', function(e) {
         e.preventDefault()
@@ -166,6 +170,9 @@
             i_sch()
         }
     )
+    $('#uns').className = 'h'
+    $('#tg-iframe').className = 'h'
+    $('#tg-iframe').children[0].src = './g-translate.html?parent=' + location.origin + location.pathname
     window.addEventListener('load', function() {
         console.log('Load page')
     })

@@ -6,126 +6,79 @@
     <title>Nihan | Recursos para diseñadores</title>
     <link rel="icon" type="image/png" href="nihan.png">
     <script>
-        function toIndex(){
-            open(location.protocol + '//' + location.host + location.pathname,"_top")
-        }
-        let url = location.search
+        function toIndex() {location.href = location.origin + location.pathname}
+        let lsu = location.search
         var t_b
-        
-        if (-1 == url.search("s=") && url !== ''){
-            // incorrec
-            t_b = ''
+        if (!lsu.includes('s=') && lsu != '') {
             toIndex()
         }
-        else if (-1 !== url.search("s=") && url.length > 2){
-            //correct
-            t_b = url.split("s=")[1].split("&")[0]
+        else if (lsu.includes('s=') && lsu.length > 2) {
+            t_b = lsu.split('s=')[1].split('&')[0]
         }
-        else if(url == '') {
-            // null
+        else if(lsu == '') {
             t_b = ''
         }
     </script>
     <link rel="stylesheet" href="dg.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
     <script src="dg-data.js"></script>
     <meta name="google" content="notranslate">
 </head>
 <body data-wgd="app-off" data-val="input-off" data-load="false">
-    <aside>
-        <div class="load"></div>
-    </aside>
-    <script>
-        if(t_b == ""){
-            var randomURL = 'https://source.unsplash.com/0x' + dg_data['h_doc'] + '/?nature,ocean,animals,wallpaper,photography'
-        }
-        else {
-            var randomURL = 'https://source.unsplash.com/0x' + dg_data['h_doc'] + '/?' + t_b
-        }
-        // randomURL = 'https://source.unsplash.com/0x' + dg_data['size_wall_dft'] + '/daily'
-        axios.get(randomURL).then( data => {
-            const unsimg = data.request.responseURL
-            document.body.style.backgroundImage = 'url(' + unsimg + ')'
-            document.getElementById('open-wall').setAttribute('data-url',unsimg)
-            let newImg = new Image
-            newImg.onload = function() {
-                document.body.setAttribute('data-load','true')
-                setTimeout(function(){
-                    let bgImg = document.getElementById('open-wall').getAttribute('data-url')
-                    console.log(bgImg)
-                    bgImg = bgImg.substring(0,bgImg.indexOf('?'))
-                    console.log(bgImg)
-                    for (const siz in dg_data['sizes']) {
-                        let si = dg_data['sizes'][siz]
-                        let l_a_s = document.createElement('a')
-                        l_a_s.innerText = 'Resolución ' + si[0]
-                        l_a_s.setAttribute('target','_blank')
-                        if (typeof si[1] !== 'string') {
-                            let wdt = si[1] * newImg.width / dg_data['size_wall_dft']
-                            wdt = Math.round(wdt / 1) *  1
-                            l_a_s.setAttribute('data-size', wdt + ' x ' + si[1])
-                            l_a_s.href = bgImg + '?h=' + si[1]
-                        }
-                        else {
-                            l_a_s.setAttribute('data-size', si[1])
-                            l_a_s.href = bgImg
-                        }
-                        document.getElementById('uns').appendChild(l_a_s)
-                    }
-                }, 500)
-            }
-            document.getElementById('uns').className = 'h'
-            document.getElementById('tg-iframe').className = 'h'
-            document.getElementById('tg-iframe').children[0].src = './g-translate.html?parent=' + location.protocol + '//' + location.host + location.pathname
-            newImg.src = unsimg
-        })
-    </script>
-    <div id="uns"></div>
-    <div id="tg-iframe">
-        <iframe></iframe>
+    <div class="root">
+        <div class="app">
+
+            <aside>
+                <div class="load"></div>
+            </aside>
+            <div id="uns"></div>
+            <div id="tg-iframe"><iframe></iframe></div>
+            <div id="resultados">
+                <div id="t-groups"></div>
+                <div id="rsts"></div>
+            </div>
+            <div id="wall"></div>
+            <div id="footer">
+                <a title="Página del autor" href="https://github.com/espinozamnj/">@espinozamnj</a>
+                <span>
+                    <a id="open-wall">Ver fondo</a>
+                    <a id="open-translate">Traducir</a>
+                    <!-- <a title="Página para pruebas de color en la impresión" href="cmyk.html">CMYK</a> -->
+                </span>
+            </div>
+            <div id="search">
+                <form>
+                    <span>Nihan</span>
+                    <div>
+                        <input required id="val" type="text" maxlength="36" autocomplete="off" placeholder="Buscar plantillas, imágenes, mockups o más">
+                        <i title="Buscar">
+                            <svg viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                        </i>
+                    </div>                
+                </form>
+            </div>
+            <div id="nav">
+                <svg viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+                    <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                </svg>
+            </div>
+            <div id="fapps">
+                <p class="p-title">DG Apps</p>
+                <div class="w-apps"></div>
+            </div>
+            <a id="i-apps">
+                <svg data-load="false" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="js">
+            <script src="dg-utils.js"></script>
+            <script src="dg-app.js"></script>
+        </div>
     </div>
-    <div id="resultados">
-        <div id="t-groups"></div>
-        <div id="rsts"></div>
-    </div>
-    <div id="wall"></div>
-    <div id="footer">
-        <a title="Página del autor" href="https://github.com/espinozamnj/">@espinozamnj</a>
-        <span>
-            <a id="open-wall">Ver fondo</a>
-            <a id="open-translate">Traducir</a>
-            <!-- <a title="Página para pruebas de color en la impresión" href="cmyk.html">CMYK</a> -->
-        </span>
-    </div>
-    <div id="search">
-        <form>
-            <span>Nihan</span>
-            <div>
-                <input required id="val" type="text" maxlength="36" autocomplete="off" placeholder="Buscar plantillas, imágenes, mockups o más">
-                <i title="Buscar">
-                    <svg viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
-                    </svg>
-                </i>
-            </div>                
-        </form>
-    </div>
-    <div id="nav">
-        <svg viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
-            <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-        </svg>
-    </div>
-    <div id="fapps">
-        <p class="p-title">DG Apps</p>
-        <div class="w-apps"></div>
-    </div>
-    <a id="i-apps">
-        <svg data-load="false" viewBox="0 0 16 16" class="bi bi-grid-3x3-gap-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
-        </svg>
-    </a>
-    <script src="dg-app.js"></script>
 </body>
 </html>

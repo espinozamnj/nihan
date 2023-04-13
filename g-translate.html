@@ -71,28 +71,28 @@
     <div id="google_translate_element"></div>
     <div id="submit" txt="Buscar"></div>
     <script>
-        document.getElementById('orig').addEventListener('dblclick',function(){
+        document.getElementById('orig').addEventListener('dblclick', function() {
             document.getElementById('orig').innerText = ''
         })
-        document.getElementById('submit').addEventListener('click',function(){
+        document.getElementById('submit').addEventListener('click', function() {
             let orig = document.getElementById('orig').innerText
             let parentT = document.location.search
             parentT = parentT.substring(8,parentT = parentT.length)
-            open(parentT + "?s=" + orig.trim().toLowerCase(),"_top")
+            open(parentT + "?s=" + orig.trim().toLowerCase(), '_parent')
         })
-        window.onload = function(){            
-            document.getElementById('submit').addEventListener('click',function(){
+        window.addEventListener('load', function(){            
+            document.getElementById('submit').addEventListener('click', function() {
                 var sel = document.querySelector('#google_translate_element select')
-                var val = "en";
-                var opts = sel.options;
+                var val = "en"
+                var opts = sel.options
                 for (var opt, j = 0; opt = opts[j]; j++) {
                     if (opt.value == val) {
-                        sel.selectedIndex = j;
-                        break;
+                        sel.selectedIndex = j
+                        break
                     }
                 }
             })
-        }
+        })
     </script>
     <!-- https://codepen.io/csesumonpro/pen/mdJQMGN?editors=0100 -->
 </body>
