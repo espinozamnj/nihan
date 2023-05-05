@@ -190,6 +190,7 @@ var dg_data = {
         ['https://stocksnap.io/','StockSnap.io'],
         ['https://unsplash.com/','Unsplash'],
         ['https://pixabay.com/','Pixabay'],
+        ['https://35photo.pro/', '35Photo']
       ],
     },
     {
@@ -297,6 +298,7 @@ var dg_data = {
         ['iStock', 'https://www.istockphoto.com/es/search/2/image?family=creative&phrase={Q}'],
         ['Adobe Stock', 'https://stock.adobe.com/pe/search?k={Q}&search_type=usertyped'],
         ['Freepik', 'https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query={Q}&type=photo']
+        ['PeopleImages', 'https://peopleimages.com/search#{Q}']
       ]
     },
     {
