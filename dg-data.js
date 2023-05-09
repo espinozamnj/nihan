@@ -209,7 +209,10 @@ var dg_data = {
         ['https://publicdomainvectors.org/es','Publicdomainvectors'],
         ['https://tabbied.com/select-artwork','Tabbied'],
         ['https://blush.design/collections/open-peeps/open-peeps','Open Peeps'],
-        ['https://undraw.co/','UnDraw']
+        ['https://undraw.co/','UnDraw'],
+        ['https://www.manypixels.co/','ManyPixels'],
+        ['https://freewebillustrations.com/','Free Web Illustrations'],
+        ['https://www.drawkit.com/','DrawKit']
       ],
     },
     {
