@@ -300,7 +300,7 @@ var dg_data = {
         ['Depositphotos', 'https://sp.depositphotos.com/stock-photos/{Q}.html?filter=all'],
         ['iStock', 'https://www.istockphoto.com/es/search/2/image?family=creative&phrase={Q}'],
         ['Adobe Stock', 'https://stock.adobe.com/pe/search?k={Q}&search_type=usertyped'],
-        ['Freepik', 'https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query={Q}&type=photo']
+        ['Freepik', 'https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query={Q}&type=photo'],
         ['PeopleImages', 'https://peopleimages.com/search#{Q}']
       ]
     },
