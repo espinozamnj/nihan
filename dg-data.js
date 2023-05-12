@@ -339,8 +339,8 @@ var dg_data = {
         ['Pexels', 'https://www.pexels.com/search/videos/{Q}'],
         ['Pixabay', 'https://pixabay.com/videos/search/{Q}'],
         ['Videezy', 'https://www.videezy.com/free-video/{Q}'],
-        ['Videvo', 'https://www.videvo.net/search/{Q}/clip_typeundefined/freeclips/yes/'],
-        ['Coverr', 'https://coverr.co/search?q={Q}']
+        ['Videvo', 'https://www.videvo.net/search/?q={Q}&mode=video&sort=&type%5B0%5D=free'],
+        ['Coverr', 'https://coverr.co/s?q={Q}']
       ]
     },
     {
