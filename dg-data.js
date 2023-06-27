@@ -90,6 +90,17 @@ var dg_data = {
       ],
     },
     {
+      title: 'Logos library',
+      items: [
+        ['https://es.logodownload.org/', 'Logo Download'],
+        ['https://worldvectorlogo.com/es', 'Worldvectorlogo'],
+        ['https://logos-world.net/', 'Logos-world'],
+        ['https://1000marcas.net/', '1000marcas'],
+        ['https://logolook.net/', 'LogoLook'],
+        ['https://www.logoseek.com/', 'LogoSeek'],
+      ]
+    },
+    {
       title: 'Paletas',
       items: [
         ['https://colorhunt.co/','Color Hunt'],
