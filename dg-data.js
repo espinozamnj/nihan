@@ -49,6 +49,7 @@ var dg_data = {
         ['https://www.vectorizer.io/','Vectorizer'],
         ['https://pfpmaker.com/','Profile Picture Maker'],
         ['https://randomuser.me/','Random User Generator'],
+        ['https://viliusle.github.io/miniPaint/', 'MiniPaint'],
       ],
     },
     {
