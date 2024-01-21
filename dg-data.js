@@ -34,11 +34,11 @@ var dg_data = {
         ['https://raw.pics.io/', 'Pics io'],
         ['https://www.befunky.com/es/crear/editor-de-fotos/', 'BeFunky'],
         ['https://pixlr.com/es/e/','Pixlr E'],
-        ['https://photopea.com/','Photopea'],
+        ['https://photopea.com/','Photopea', 'app'],
         ['https://theinpaint.com/','Inpaint'],
         ['http://www.canonoutsideofauto.ca/play/','Canon Exposure'],
         ['https://deep-image.ai/','Deep Image'],
-        ['https://www.remove.bg/','Remove BG'],
+        ['https://www.remove.bg/','Remove BG', 'app'],
         ['https://retoucher.online/','Retoucher'],
         ['https://www.watermarkremover.io/','WatermarkRemover'],
         ['https://magiceraser.io/','Magic Eraser'],
@@ -121,6 +121,7 @@ var dg_data = {
     {
       title: 'Recursos',
       items: [
+        ['https://graphicsfamily.com/', 'Graphics Family'],
         ['https://www.emprendetools.co/','EmprendeTools'],
         ['https://www.textures.com/','Textures for Photoshop'],
         ['https://iconscout.com/icons','IconScout'],

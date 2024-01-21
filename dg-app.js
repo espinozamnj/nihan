@@ -78,7 +78,7 @@
 
         for(const gitems in tg['items']) {
             ti = tg['items'][gitems]
-            w_g_a = document.createElement('a')
+            let w_g_a = document.createElement('a')
             w_g_b.appendChild(w_g_a)
             w_g_a.href = ti[0]
             w_g_a.innerText = ti[1]
