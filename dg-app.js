@@ -137,23 +137,12 @@
             g_r_c.appendChild(g_r_a)
         }
     }
-
     $('#open-wall').addEventListener('click', function() {
         if ($('#uns').className == 'h') {
-            $('#tg-iframe').className = 'h'
             $('#uns').className = ''
         }
         else {
             $('#uns').className = 'h'
-        }
-    })
-    $('#open-translate').addEventListener('click', function() {
-        if ($('#tg-iframe').className == 'h') {
-            $('#tg-iframe').className = ''
-            $('#uns').className = 'h'
-        }
-        else {
-            $('#tg-iframe').className = 'h'
         }
     })
     function i_sch() {
@@ -171,9 +160,4 @@
         }
     )
     $('#uns').className = 'h'
-    $('#tg-iframe').className = 'h'
-    $('#tg-iframe').children[0].src = './g-translate.html?parent=' + location.origin + location.pathname
-    window.addEventListener('load', function() {
-        console.log('Load page')
-    })
 })()

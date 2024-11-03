@@ -69,6 +69,7 @@ var dg_data = {
     {
       title: 'Inspiración',
       items: [
+        ['https://namelix.com/','Namelix'],
         ['https://dribbble.com/','Dribbble'],
         ['https://muz.li/','Muzli'],
         ['https://es.vexels.com/','Vexels'],

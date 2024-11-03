@@ -1,3 +1,4 @@
+// The use of the API has changed and requires developer registration
 (function() {
     let randomURL = ''
     if (t_b == '' || t_b.split('%20').length > 1) {
@@ -7,10 +8,11 @@
         randomURL = 'https://source.unsplash.com/0x' + dg_data['h_doc'] + '/?' + t_b
     }
     // randomURL = 'https://source.unsplash.com/0x' + dg_data['size_wall_dft'] + '/daily'
-    fetch(randomURL).then(function(response) {
+    // fetch(randomURL).then(function(response) {
         // console.log(response)
-        let imgSrc = response.url.substring(0, response.url.indexOf('?'))
-        document.body.style.backgroundImage = 'url(' + imgSrc + '?h=' + dg_data['h_doc'] + ')'
+        // let imgSrc = response.url.substring(0, response.url.indexOf('?'))
+        let imgSrc = 'https://images.unsplash.com/photo-1658412544081-c74a50596004?q=80&h' + dg_data['h_doc'] + '&auto=format&fit=crop'
+        document.body.style.backgroundImage = 'url(' + imgSrc + ')'
 
         let newImg = new Image
         newImg.onload = function() {
@@ -36,6 +38,6 @@
             }, 500)
         }
         newImg.src = imgSrc + '?h=200' 
-        response.text().then(function() {})
-    })
+        // response.text().then(function() {})
+    // })
 })()

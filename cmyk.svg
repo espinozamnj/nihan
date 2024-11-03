@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2019 (64-Bit) -->
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="478px" height="478px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 478 478"
- xmlns:xlink="http://www.w3.org/1999/xlink">
+viewBox="0 0 478 478">
  <defs>
   <style type="text/css">
-   <![CDATA[
     .str2 {stroke:#FEFEFE;stroke-width:5.9;stroke-miterlimit:22.9256}
     .str1 {stroke:#201E1E;stroke-width:5.9;stroke-miterlimit:22.9256}
     .str0 {stroke:#201E1E;stroke-width:5.9;stroke-linecap:round;stroke-miterlimit:22.9256}
@@ -275,7 +271,6 @@ viewBox="0 0 478 478"
     .fil230 {fill:#444446}
     .fil3 {fill:#3E4095}
     .fil0 {fill:#444446}
-   ]]>
   </style>
      <clipPath id="id0">
       <path d="M239 160.32c43.46,0 78.68,35.23 78.68,78.68 0,43.46 -35.22,78.68 -78.68,78.68 -43.46,0 -78.68,-35.22 -78.68,-78.68 0,-43.45 35.22,-78.68 78.68,-78.68z"/>
